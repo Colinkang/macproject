@@ -14,6 +14,7 @@
 		AB6A714A1E8232D600825CC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6A71481E8232D600825CC2 /* LaunchScreen.storyboard */; };
 		AB6A71551E8232D700825CC2 /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A71541E8232D700825CC2 /* testTests.swift */; };
 		AB6A71601E8232D800825CC2 /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A715F1E8232D800825CC2 /* testUITests.swift */; };
+		AB6A716F1E8242A400825CC2 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6A716E1E8242A400825CC2 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		AB6A715B1E8232D800825CC2 /* testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6A715F1E8232D800825CC2 /* testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITests.swift; sourceTree = "<group>"; };
 		AB6A71611E8232D800825CC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB6A716E1E8242A400825CC2 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		AB7ADC231E9B23B20034E8CC /* test-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "test-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6A716F1E8242A400825CC2 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +81,13 @@
 		AB6A71331E8232C700825CC2 = {
 			isa = PBXGroup;
 			children = (
+				AB6A71431E8232D500825CC2 /* Main.storyboard */,
+				AB7ADC231E9B23B20034E8CC /* test-Bridging-Header.h */,
 				AB6A713E1E8232D300825CC2 /* test */,
 				AB6A71531E8232D700825CC2 /* testTests */,
 				AB6A715E1E8232D800825CC2 /* testUITests */,
 				AB6A713D1E8232D300825CC2 /* Products */,
+				AB6A716D1E8242A400825CC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +106,6 @@
 			children = (
 				AB6A713F1E8232D300825CC2 /* AppDelegate.swift */,
 				AB6A71411E8232D300825CC2 /* ViewController.swift */,
-				AB6A71431E8232D500825CC2 /* Main.storyboard */,
 				AB6A71461E8232D500825CC2 /* Assets.xcassets */,
 				AB6A71481E8232D600825CC2 /* LaunchScreen.storyboard */,
 				AB6A714B1E8232D600825CC2 /* Info.plist */,
@@ -123,6 +129,14 @@
 				AB6A71611E8232D800825CC2 /* Info.plist */,
 			);
 			path = testUITests;
+			sourceTree = "<group>";
+		};
+		AB6A716D1E8242A400825CC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB6A716E1E8242A400825CC2 /* AdSupport.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +316,7 @@
 				AB6A71441E8232D500825CC2 /* Base */,
 			);
 			name = Main.storyboard;
+			path = test;
 			sourceTree = "<group>";
 		};
 		AB6A71481E8232D600825CC2 /* LaunchScreen.storyboard */ = {
@@ -416,6 +431,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bitse.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "test-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -428,6 +444,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bitse.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "test-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -505,6 +522,7 @@
 				AB6A71661E8232D800825CC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB6A71671E8232D800825CC2 /* Build configuration list for PBXNativeTarget "testTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +531,7 @@
 				AB6A71691E8232D800825CC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB6A716A1E8232D800825CC2 /* Build configuration list for PBXNativeTarget "testUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +540,7 @@
 				AB6A716C1E8232D800825CC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
