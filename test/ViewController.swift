@@ -49,19 +49,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
-        let requestUrl = "http://api.v5.9080app.com/SourceClick.ashx"
-        //let appid =            //渠道id
-        //let adid =             //每个广告的id
-//        var ip : String? = getLocalIPAddressForCurrentWiFi()          //手机ip
-//        var mac = "02:00:00:00:00:00"
-        let session = URLSession(configuration: URLSessionConfiguration.default)
-        var req = URLRequest(url: URL(string:requestUrl)!)
-        req.httpMethod = "get"
-        let task = session.dataTask(with: req, completionHandler: {(data, res, err) -> Void in
-           print(data,res,err)
-        })
-        task.resume()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,7 +58,26 @@ class ViewController: UIViewController {
     }
 
     @IBAction func send(_ sender: UIButton) {
-        
+        //let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+        //let requestUrl = "http://api.v5.9080app.com/SourceClick.ashx"
+        let requestUrl = "http://www.baidu.com"
+        //let appid =            //渠道id
+        //let adid =             //每个广告的id
+        //        var ip : String? = getLocalIPAddressForCurrentWiFi()          //手机ip
+        //        var mac = "02:00:00:00:00:00"
+        let session = URLSession(configuration: URLSessionConfiguration.default)
+        var req = URLRequest(url: URL(string:requestUrl)!)
+        req.httpMethod = "get"
+        let task = session.dataTask(with: req, completionHandler: {(data, res, err) -> Void in
+            // print(data,res,err)
+            let av = UIAlertController(title: "MSG", message: res?.description, preferredStyle: UIAlertControllerStyle.alert)
+            let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (a) in
+                self.dismiss(animated: true, completion: nil)
+            })
+            av.addAction(action)
+            self.present(av, animated: true, completion: nil)
+        })
+        task.resume()
         
     }
 
